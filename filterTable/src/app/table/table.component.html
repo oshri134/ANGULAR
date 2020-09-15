@@ -1,0 +1,35 @@
+
+
+
+<select  type="button" id="category" #selector name="category" (change)="filterStudentList(selector.value)" >
+    <option value="0">Show All Students</option>
+    <option value="1">Id between 1-6</option>
+    <option value="2">Age bigger than 30</option>
+    <option value="3">Avg. grade over 60</option>
+    <option value="4">Phone number ends with 4</option>
+    <option value="5" >Name start with "B"</option>
+</select>
+
+<table>
+    <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Phone</th>
+            <th>Address</th>
+          </tr>
+
+          
+<tr *ngFor="let student of filteredStudent" >
+  
+<th>{{student.id}}</th>
+<th>{{student.name}}</th>
+<th>{{student.age}}</th>
+<th>{{student.phone}}</th>
+<th>{{student.address}}</th>
+
+</tr>
+
+
+</table>
+
